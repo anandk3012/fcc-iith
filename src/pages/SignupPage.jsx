@@ -9,7 +9,7 @@ export function SignupPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
-  const emailRef = useRef(null); // Change initialization to useRef(null)
+  const emailRef = useRef(null); 
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
   const authLogin = useAuth();

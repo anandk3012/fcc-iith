@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { AuthProvider, useAuth } from "./contexts/Contexts";
 import Dashboard from "./pages/UserDashboard";
 import HomePage from "./pages/Home";
+import Quiz from "./pages/Quiz";
 
 function App() {
   const currentUser = useAuth();
@@ -16,6 +17,7 @@ function App() {
         <Header isAuthenticated={currentUser?.email !== undefined} />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/quiz" element={<Quiz />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Signup" element={<SignupPage />} />
           <Route path="/dashboard" element={<Dashboard />} />

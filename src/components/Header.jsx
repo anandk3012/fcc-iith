@@ -65,7 +65,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="shadow-sm bg-slate-200 shadow-gray-500 ">
+    <nav className="shadow-sm rounded-lg bg-slate-200 shadow-gray-500 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <div className="flex items-center">
           <Link to="/">
@@ -75,6 +75,12 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           {currentUser ? (
             <>
+              <Link to="/" className="w-auto rounded-md bg-blue-700 text-white text-center hover:text-white hover:bg-blue-800 p-2">
+                Home
+              </Link>
+              <Link to="/dashboard" className="w-auto rounded-md bg-blue-700 text-white text-center hover:text-white hover:bg-blue-800 p-2">
+                Dashboard
+              </Link>
               <button onClick={handleProfileClick} className= "flex w-auto items-center rounded-md bg-blue-700 text-white hover:text-white hover:bg-blue-800 p-2">
                 <FaUser />Profile
               </button>
@@ -84,7 +90,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link to="/Signup"aria-disabled="true" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md">
+              <Link to="/Signup" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md">
                 SignUp
               </Link>
               <Link to="/Login" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md">
@@ -96,8 +102,8 @@ const Header = () => {
       </div>
       {/* Profile Popup */}
       {showProfilePopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-  <div className="bg-white rounded-lg p-8 max-w-md relative"> {/* Add relative class */}
+        <div className="fixed w-full inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
+  <div className="bg-white w-auto md:w-1/3 rounded-lg p-8 max-w-md relative"> {/* Add relative class */}
     {/* Move the close button here */}
     <button onClick={handlePopupClose} className="absolute top-0 right-0 m-4 text-gray-600 hover:text-gray-800 focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

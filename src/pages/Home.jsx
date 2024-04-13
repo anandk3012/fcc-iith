@@ -67,16 +67,16 @@ function HomePage() {
     ];
 
     return (
-        <div className="container mx-auto px-4">
-            <main className="py-8">
+        <div className="container mx-auto">
+            <main className="bg-blue-600">
                 {/* Landing Section */}
-                <section className="landing-section h-screen flex flex-col justify-center items-center mb-8 bg-blue-600 text-white rounded-lg shadow-md p-6 md:p-8 text-center">
+                <section className="landing-section h-screen flex flex-col justify-center items-center mb-8 text-white rounded-lg text-center">
                     <h1 className="text-4xl md:text-7xl font-bold mb-4">Finance and Consulting Club</h1>
                     <p className="text-xl md:text-3xl font-mono">Empowering students with knowledge and skills</p>
                 </section>
 
                 {/* About Us Section */}
-                <section className="about-section mb-8 bg-slate-200 rounded-lg shadow-md p-6 md:p-8">
+                <section className="about-section mb-8 bg-slate-200 rounded-lg shadow-md mx-4 p-6 md:p-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                         <div className="md:order-2">
                             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">About Us</h2>
@@ -99,7 +99,7 @@ function HomePage() {
                 <EventsSection events={events} />
 
                 {/* Join Us Section */}
-                <section className="join-section mb-8 bg-gray-200 rounded-lg shadow-md p-6 md:p-8">
+                <section className="join-section mb-8 mx-4 bg-gray-200 rounded-lg shadow-md p-6 md:p-8">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">Join Us</h2>
                     <p className="text-lg md:text-xl leading-relaxed text-gray-700">
                         If you're a student at IIT Hyderabad and interested in finance or consulting, we'd love to have you join our club!
