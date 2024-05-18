@@ -13,13 +13,13 @@ function App() {
 
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/fcc-iith"> 
         <Header isAuthenticated={currentUser?.email !== undefined} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/Login" element={<LoginPage />} />
-          <Route path="/Signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
